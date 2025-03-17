@@ -5,15 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aniruddha Bora - Personal Website</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f4f4; }
-        .container { width: 80%; margin: auto; overflow: hidden; background: #fff; padding: 20px; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        .container { width: 80%; margin: auto; background: #fff; padding: 20px; }
         h1, h2, h3 { color: #333; }
-        .section { margin-bottom: 20px; }
-        .contact a { color: blue; text-decoration: none; }
-        ul { list-style: none; padding: 0; }
+        .tabs { display: flex; background: #333; padding: 10px; }
+        .tabs a { color: white; text-decoration: none; padding: 10px 20px; display: block; }
+        .tabs a:hover { background: #575757; }
+        .tab-content { display: none; padding: 20px; background: white; }
+        .active { display: block; }
     </style>
+    <script>
+        function showTab(tabId) {
+            var tabs = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].style.display = "none";
+            }
+            document.getElementById(tabId).style.display = "block";
+        }
+    </script>
 </head>
-<body>
+<body onload="showTab('about')">
     <div class="container">
         <header>
             <h1>Aniruddha Bora</h1>
@@ -23,12 +34,21 @@
             </p>
         </header>
         
-        <section class="section">
+        <nav class="tabs">
+            <a href="#" onclick="showTab('about')">About</a>
+            <a href="#" onclick="showTab('skills')">Skills</a>
+            <a href="#" onclick="showTab('education')">Education</a>
+            <a href="#" onclick="showTab('experience')">Experience</a>
+            <a href="#" onclick="showTab('publications')">Publications</a>
+            <a href="#" onclick="showTab('awards')">Awards</a>
+        </nav>
+        
+        <section id="about" class="tab-content">
             <h2>Research Interests</h2>
             <p>Data-driven scientific computing, climate science, numerical analysis, deep learning, mathematical modeling, heat flow, computational fluid dynamics.</p>
         </section>
         
-        <section class="section">
+        <section id="skills" class="tab-content">
             <h2>Skills</h2>
             <ul>
                 <li><strong>Programming Languages:</strong> Python, Jax, PyTorch, Fortran, Fenics, MATLAB, Octave</li>
@@ -38,7 +58,7 @@
             </ul>
         </section>
         
-        <section class="section">
+        <section id="education" class="tab-content">
             <h2>Education</h2>
             <ul>
                 <li>Ph.D. in Computational Analysis & Modeling, Louisiana Tech University (2021)</li>
@@ -47,12 +67,12 @@
             </ul>
         </section>
         
-        <section class="section">
+        <section id="experience" class="tab-content">
             <h2>Experience</h2>
             <p>Postdoctoral Research Associate, Department of Applied Mathematics, Brown University</p>
         </section>
         
-        <section class="section">
+        <section id="publications" class="tab-content">
             <h2>Publications</h2>
             <ul>
                 <li><a href="https://doi.org/10.1016/j.ijheatmasstransfer.2022.122791">Neural network method for solving nonlocal two-temperature nanoscale heat conduction</a></li>
@@ -62,7 +82,7 @@
             </ul>
         </section>
         
-        <section class="section">
+        <section id="awards" class="tab-content">
             <h2>Honors & Awards</h2>
             <ul>
                 <li>Harry J. Gaston, Jr. Memorial Scholarship in Engineering (2020-2021)</li>
@@ -73,4 +93,3 @@
     </div>
 </body>
 </html>
-
