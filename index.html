@@ -11,11 +11,10 @@
         .tabs { display: flex; justify-content: center; background: #333; padding: 10px; border-radius: 5px; }
         .tabs a { color: white; text-decoration: none; padding: 10px 20px; display: block; transition: background 0.3s ease-in-out; }
         .tabs a:hover { background: #575757; border-radius: 5px; }
-        .tab-content { display: none; padding: 20px; background: white; border-radius: 5px; text-align: left; }
+        .tab-content { display: none; padding: 20px; background: white; border-radius: 5px; }
         .active { display: block; }
         .profile-img { width: 180px; height: 180px; border-radius: 50%; margin-top: 10px; border: 3px solid #333; }
         .footer { margin-top: 20px; padding: 10px; background: #333; color: white; text-align: center; border-radius: 5px; }
-        .publications li, .talks li { margin-bottom: 10px; }
     </style>
     <script>
         function showTab(tabId) {
@@ -44,21 +43,55 @@
             <a href="#" onclick="showTab('education')">Education</a>
             <a href="#" onclick="showTab('experience')">Experience</a>
             <a href="#" onclick="showTab('publications')">Publications</a>
-            <a href="#" onclick="showTab('talks')">Presentations & Talks</a>
             <a href="#" onclick="showTab('awards')">Awards</a>
         </nav>
         
-        <section id="talks" class="tab-content">
-            <h2>Presentations & Talks</h2>
-            <ul class="talks">
-                <li><b>Mathematical Opportunities in Digital Twins (MATH-DT)</b>, George Mason University, Arlington, VA. Date: Dec 11-13, 2023.</li>
-                <li><b>Applied Mathematics Symposium: Artificial Intelligence Meets Fluid</b>, IIT Guwahati, IIT Hyderabad, VIT, India. "Learning bias corrections for climate models using deep neural operators." Date: July 7, 2023.</li>
-                <li><b>Machine Learning + X, Crunch Seminar, Brown University</b>, "Neural Network Method for Solving Parabolic Two-Step Microscale Heat, Conduction in Double-Layer Thin Films Exposed to Ultrashort-Pulsed Lasers." Date: July 23, 2021.</li>
-                <li><b>Computational Mathematics and Machine Learning Workshop</b>, Lorentz Centre, Netherlands. "Neural Network Method for Solving Parabolic Two-Step Microscale Heat, Conduction in Double-Layer Thin Films Exposed to Ultrashort-Pulsed Lasers." Date: Nov 1, 2021.</li>
-                <li><b>Science Seminar</b>, Louisiana Tech University, Ruston, USA. Date: Nov 28, 2021.</li>
-                <li><b>Applications on Riemann Integration and Metric Space (WARIMS-2021)</b>, Assam Don Bosco University. Workshop on “Applications on Riemann Integration and Metric Space.” Date: Dec 23, 2021.</li>
-                <li><b>Machine Learning + X, Crunch Seminar, Brown University</b>, "Combining Differentiable PDE Solvers and Graph Neural Networks for Fluid Flow Prediction (paper review)." Date: April 22, 2022.</li>
-                <li><b>AAAI 2023 Spring Symposium Series</b>, Hyatt Regency, San Francisco Airport, CA. "Learning bias corrections for climate models using deep neural operators." Date: March 27-29, 2023.</li>
+        <section id="about" class="tab-content">
+            <h2>Research Interests</h2>
+            <p>Data-driven scientific computing, climate science, numerical analysis, deep learning, mathematical modeling, heat flow, computational fluid dynamics.</p>
+        </section>
+        
+        <section id="skills" class="tab-content">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Programming Languages:</strong> Python, Jax, PyTorch, Fortran, Fenics, MATLAB, Octave</li>
+                <li><strong>Statistical Packages:</strong> R, SAS</li>
+                <li><strong>HPC Environment:</strong> OSCAR, Argonne Theta (KNL+GPU) nodes</li>
+                <li><strong>Scheduler:</strong> Slurm, Cobalt</li>
+            </ul>
+        </section>
+        
+        <section id="education" class="tab-content">
+            <h2>Education</h2>
+            <ul>
+                <li>Ph.D. in Computational Analysis & Modeling, Louisiana Tech University (2021)</li>
+                <li>M.S. in Applied Mathematics, South Asian University, New Delhi (2015)</li>
+                <li>B.Sc. in Mathematics, Cotton College, Guwahati (2013)</li>
+            </ul>
+        </section>
+        
+        <section id="experience" class="tab-content">
+            <h2>Experience</h2>
+            <p>Postdoctoral Research Associate, Department of Applied Mathematics, Brown University</p>
+        </section>
+        
+        <section id="publications" class="tab-content">
+            <h2>Publications</h2>
+            <ul>
+                <li><a href="https://doi.org/10.1016/j.ijheatmasstransfer.2022.122791">Neural network method for solving nonlocal two-temperature nanoscale heat conduction</a></li>
+                <li><a href="https://doi.org/10.1016/j.ijheatmasstransfer.2021.121616">Neural network method for solving parabolic two-temperature microscale heat conduction</a></li>
+                <li><a href="https://doi.org/10.4208/cicp.OA-2022-0135">A new artificial neural network method for solving Schrödinger equations</a></li>
+                <li><a href="https://link.springer.com/chapter/10.1007/978-3-031-36644-4_6">Physics informed deep neural operator networks</a></li>
+                <li>More available upon request.</li>
+            </ul>
+        </section>
+        
+        <section id="awards" class="tab-content">
+            <h2>Honors & Awards</h2>
+            <ul>
+                <li>Harry J. Gaston, Jr. Memorial Scholarship in Engineering (2020-2021)</li>
+                <li>TA of the Year, Louisiana Tech University (2018-2019)</li>
+                <li>Highest Cumulative GPA, South Asian University (2013-2014)</li>
             </ul>
         </section>
         
