@@ -1,5 +1,4 @@
-# Save the updated index.html file for GitHub Pages
-index_html_content = """<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -48,41 +47,24 @@ index_html_content = """<!DOCTYPE html>
             <a href="#" onclick="showTab('talks')">Presentations & Talks</a>
             <a href="#" onclick="showTab('awards')">Awards</a>
         </nav>
-
-        <section id="publications" class="tab-content">
-            <h2>Publications</h2>
-            <ol class="publications">
-                <li>Jiawen Wei, <b>Aniruddha Bora</b>, et al. "XAI4Climate: Attributing the role of climate change on extreme-weather precursors via interpretable machine learning." <i>ICLR 2025.</i></li>
-                <li>Siavash Khodakarami, Vivek Oommen, <b>Aniruddha Bora</b>, et al. "Mitigating Spectral Bias in Neural Operators via High-Frequency Scaling." (Under preparation)</li>
-                <li>Shxiuan Zhang, Ruby Leung, <b>Aniruddha Bora</b>, et al. "Improved nudging strategy for constraining humidity and temperature fields in E3SM." <i>Geoscientific Model Development, 2024.</i></li>
-                <li><b>Aniruddha Bora</b>, Isabel K Alvarez, et al. "Enhancing Heat Sink Efficiency in MOSFETs using Physics Informed Neural Networks." <i>(Submitted to IJHMT)</i></li>
-                <li>Vivek Oommen, <b>Aniruddha Bora</b>, et al. "Integrating Neural Operators with Diffusion Models Improves Spectral Representation in Turbulence Modeling." <i>Proceedings of the Royal Society A, 2025.</i></li>
-            </ol>
-        </section>
-
+        
         <section id="talks" class="tab-content">
             <h2>Presentations & Talks</h2>
             <ul class="talks">
-                <li><b>MATH-DT</b>, George Mason University. Date: Dec 11-13, 2023.</li>
-                <li><b>AI Meets Fluid</b>, IIT Guwahati, IIT Hyderabad, VIT, India. "Learning bias corrections for climate models." Date: July 7, 2023.</li>
-                <li><b>Machine Learning + X, Brown University</b>, "Neural Network Method for Solving Heat Conduction." Date: July 23, 2021.</li>
-                <li><b>Computational Mathematics Workshop</b>, Lorentz Centre, Netherlands. Date: Nov 1, 2021.</li>
-                <li><b>AAAI 2023 Spring Symposium</b>, San Francisco, CA. "Learning bias corrections for climate models." Date: March 27-29, 2023.</li>
+                <li><b>Mathematical Opportunities in Digital Twins (MATH-DT)</b>, George Mason University, Arlington, VA. Date: Dec 11-13, 2023.</li>
+                <li><b>Applied Mathematics Symposium: Artificial Intelligence Meets Fluid</b>, IIT Guwahati, IIT Hyderabad, VIT, India. "Learning bias corrections for climate models using deep neural operators." Date: July 7, 2023.</li>
+                <li><b>Machine Learning + X, Crunch Seminar, Brown University</b>, "Neural Network Method for Solving Parabolic Two-Step Microscale Heat, Conduction in Double-Layer Thin Films Exposed to Ultrashort-Pulsed Lasers." Date: July 23, 2021.</li>
+                <li><b>Computational Mathematics and Machine Learning Workshop</b>, Lorentz Centre, Netherlands. "Neural Network Method for Solving Parabolic Two-Step Microscale Heat, Conduction in Double-Layer Thin Films Exposed to Ultrashort-Pulsed Lasers." Date: Nov 1, 2021.</li>
+                <li><b>Science Seminar</b>, Louisiana Tech University, Ruston, USA. Date: Nov 28, 2021.</li>
+                <li><b>Applications on Riemann Integration and Metric Space (WARIMS-2021)</b>, Assam Don Bosco University. Workshop on “Applications on Riemann Integration and Metric Space.” Date: Dec 23, 2021.</li>
+                <li><b>Machine Learning + X, Crunch Seminar, Brown University</b>, "Combining Differentiable PDE Solvers and Graph Neural Networks for Fluid Flow Prediction (paper review)." Date: April 22, 2022.</li>
+                <li><b>AAAI 2023 Spring Symposium Series</b>, Hyatt Regency, San Francisco Airport, CA. "Learning bias corrections for climate models using deep neural operators." Date: March 27-29, 2023.</li>
             </ul>
         </section>
-
+        
         <footer class="footer">
             <p>&copy; 2024 Aniruddha Bora | Built with ❤️ and HTML/CSS</p>
         </footer>
     </div>
 </body>
 </html>
-"""
-
-# Save the file
-index_file_path = "/mnt/data/index.html"
-with open(index_file_path, "w") as file:
-    file.write(index_html_content)
-
-# Provide the download link
-index_file_path
