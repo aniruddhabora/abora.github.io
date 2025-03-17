@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+# Save the updated index.html file for GitHub Pages
+index_html_content = """<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,7 +16,7 @@
         .active { display: block; }
         .profile-img { width: 180px; height: 180px; border-radius: 50%; margin-top: 10px; border: 3px solid #333; }
         .footer { margin-top: 20px; padding: 10px; background: #333; color: white; text-align: center; border-radius: 5px; }
-        .publications li { margin-bottom: 10px; }
+        .publications li, .talks li { margin-bottom: 10px; }
     </style>
     <script>
         function showTab(tabId) {
@@ -44,60 +45,44 @@
             <a href="#" onclick="showTab('education')">Education</a>
             <a href="#" onclick="showTab('experience')">Experience</a>
             <a href="#" onclick="showTab('publications')">Publications</a>
+            <a href="#" onclick="showTab('talks')">Presentations & Talks</a>
             <a href="#" onclick="showTab('awards')">Awards</a>
         </nav>
-        
-        <section id="about" class="tab-content">
-            <h2>Research Interests</h2>
-            <p>Data-driven scientific computing, climate science, numerical analysis, deep learning, mathematical modeling, heat flow, computational fluid dynamics.</p>
-        </section>
-        
-        <section id="skills" class="tab-content">
-            <h2>Skills</h2>
-            <ul>
-                <li><strong>Programming Languages:</strong> Python, Jax, PyTorch, Fortran, Fenics, MATLAB, Octave</li>
-                <li><strong>Statistical Packages:</strong> R, SAS</li>
-                <li><strong>HPC Environment:</strong> OSCAR, Argonne Theta (KNL+GPU) nodes</li>
-                <li><strong>Scheduler:</strong> Slurm, Cobalt</li>
-            </ul>
-        </section>
-        
-        <section id="education" class="tab-content">
-            <h2>Education</h2>
-            <ul>
-                <li>Ph.D. in Computational Analysis & Modeling, Louisiana Tech University (2021)</li>
-                <li>M.S. in Applied Mathematics, South Asian University, New Delhi (2015)</li>
-                <li>B.Sc. in Mathematics, Cotton College, Guwahati (2013)</li>
-            </ul>
-        </section>
-        
-        <section id="experience" class="tab-content">
-            <h2>Experience</h2>
-            <p>Postdoctoral Research Associate, Department of Applied Mathematics, Brown University</p>
-        </section>
-        
+
         <section id="publications" class="tab-content">
             <h2>Publications</h2>
             <ol class="publications">
-                <li>Bora, A., Dai, W. "Neural network method for solving nonlocal two-temperature nanoscale heat conduction." <i>International Journal of Heat and Mass Transfer</i>, 2022. DOI: <a href="https://doi.org/10.1016/j.ijheatmasstransfer.2022.122791">10.1016/j.ijheatmasstransfer.2022.122791</a></li>
-                <li>Bora, A., Dai, W. "Neural network method for solving parabolic two-temperature microscale heat conduction." <i>International Journal of Heat and Mass Transfer</i>, 2021. DOI: <a href="https://doi.org/10.1016/j.ijheatmasstransfer.2021.121616">10.1016/j.ijheatmasstransfer.2021.121616</a></li>
-                <li>Wilson, J.P., Dai, W., Bora, A., Boyt, J.C. "A new artificial neural network method for solving Schrödinger equations on unbounded domains." <i>Communications in Computational Physics</i>, 2022. DOI: <a href="https://doi.org/10.4208/cicp.OA-2022-0135">10.4208/cicp.OA-2022-0135</a></li>
-                <li>More available upon request.</li>
+                <li>Jiawen Wei, <b>Aniruddha Bora</b>, et al. "XAI4Climate: Attributing the role of climate change on extreme-weather precursors via interpretable machine learning." <i>ICLR 2025.</i></li>
+                <li>Siavash Khodakarami, Vivek Oommen, <b>Aniruddha Bora</b>, et al. "Mitigating Spectral Bias in Neural Operators via High-Frequency Scaling." (Under preparation)</li>
+                <li>Shxiuan Zhang, Ruby Leung, <b>Aniruddha Bora</b>, et al. "Improved nudging strategy for constraining humidity and temperature fields in E3SM." <i>Geoscientific Model Development, 2024.</i></li>
+                <li><b>Aniruddha Bora</b>, Isabel K Alvarez, et al. "Enhancing Heat Sink Efficiency in MOSFETs using Physics Informed Neural Networks." <i>(Submitted to IJHMT)</i></li>
+                <li>Vivek Oommen, <b>Aniruddha Bora</b>, et al. "Integrating Neural Operators with Diffusion Models Improves Spectral Representation in Turbulence Modeling." <i>Proceedings of the Royal Society A, 2025.</i></li>
             </ol>
         </section>
-        
-        <section id="awards" class="tab-content">
-            <h2>Honors & Awards</h2>
-            <ul>
-                <li>Harry J. Gaston, Jr. Memorial Scholarship in Engineering (2020-2021)</li>
-                <li>TA of the Year, Louisiana Tech University (2018-2019)</li>
-                <li>Highest Cumulative GPA, South Asian University (2013-2014)</li>
+
+        <section id="talks" class="tab-content">
+            <h2>Presentations & Talks</h2>
+            <ul class="talks">
+                <li><b>MATH-DT</b>, George Mason University. Date: Dec 11-13, 2023.</li>
+                <li><b>AI Meets Fluid</b>, IIT Guwahati, IIT Hyderabad, VIT, India. "Learning bias corrections for climate models." Date: July 7, 2023.</li>
+                <li><b>Machine Learning + X, Brown University</b>, "Neural Network Method for Solving Heat Conduction." Date: July 23, 2021.</li>
+                <li><b>Computational Mathematics Workshop</b>, Lorentz Centre, Netherlands. Date: Nov 1, 2021.</li>
+                <li><b>AAAI 2023 Spring Symposium</b>, San Francisco, CA. "Learning bias corrections for climate models." Date: March 27-29, 2023.</li>
             </ul>
         </section>
-        
+
         <footer class="footer">
             <p>&copy; 2024 Aniruddha Bora | Built with ❤️ and HTML/CSS</p>
         </footer>
     </div>
 </body>
 </html>
+"""
+
+# Save the file
+index_file_path = "/mnt/data/index.html"
+with open(index_file_path, "w") as file:
+    file.write(index_html_content)
+
+# Provide the download link
+index_file_path
